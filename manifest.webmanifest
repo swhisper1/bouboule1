@@ -1,0 +1,12 @@
+{
+  "name": "Boules satisfaisantes",
+  "short_name": "Boules",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#06070c",
+  "theme_color": "#06070c",
+  "icons": [
+    { "src": "icon.png", "sizes": "any", "type": "image/png", "purpose": "any" }
+  ]
+}

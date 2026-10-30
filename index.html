@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#06070c">
+  <title>Boules satisfaisantes</title>
+  <!-- Logo de l'application (place icon.png dans le même dossier) -->
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Scène au format 9:16 : sa taille est calculée par script.js -->
+  <main id="stage">
+    <canvas id="canvas"></canvas>
+
+    <!-- Compteur de boules -->
+    <div id="hud" aria-live="polite">
+      <span id="count">1</span>
+      <span id="count-label">boule</span>
+    </div>
+
+    <!-- Message affiché avant le premier démarrage -->
+    <p id="hint">Appuie sur Démarrer</p>
+
+    <!-- Commandes discrètes, en bas, sous le cercle -->
+    <section id="controls">
+      <div id="buttons">
+        <button id="btn-start" class="primary" type="button">Démarrer</button>
+        <button id="btn-pause" type="button">Pause</button>
+        <button id="btn-reset" type="button">Recommencer</button>
+        <button id="btn-toggle" type="button" aria-label="Afficher ou masquer les réglages" aria-expanded="true">⚙</button>
+      </div>
+
+      <div id="sliders">
+        <label class="row">
+          <span class="lbl">Gravité</span>
+          <input id="gravity" type="range" min="200" max="4000" step="50" value="1800">
+          <output id="gravity-out">1800</output>
+        </label>
+        <label class="row">
+          <span class="lbl">Vitesse</span>
+          <input id="speed" type="range" min="0.25" max="3" step="0.05" value="1">
+          <output id="speed-out">1.00×</output>
+        </label>
+        <label class="row">
+          <span class="lbl">Volume</span>
+          <input id="volume" type="range" min="0" max="1" step="0.01" value="0.6">
+          <output id="volume-out">60%</output>
+        </label>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
